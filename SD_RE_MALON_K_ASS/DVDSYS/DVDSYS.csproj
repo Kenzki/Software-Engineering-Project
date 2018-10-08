@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1686A10B-D8BC-4E07-AF17-8A273D2E57EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DVDSYS</RootNamespace>
+    <AssemblyName>DVDSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analysis.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="frmDeRegMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeRegMembers.Designer.cs">
+      <DependentUpon>frmDeRegMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiscontinueDVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDiscontinueDVD.Designer.cs">
+      <DependentUpon>frmDiscontinueDVD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMemberAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMemberAnalysis.Designer.cs">
+      <DependentUpon>frmMemberAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExecuteRentals.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExecuteRentals.Designer.cs">
+      <DependentUpon>frmExecuteRentals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProcessReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProcessReturn.Designer.cs">
+      <DependentUpon>frmProcessReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegDVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegDVD.Designer.cs">
+      <DependentUpon>frmRegDVD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegMembers.Designer.cs">
+      <DependentUpon>frmRegMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRentalAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRentalAnalysis.Designer.cs">
+      <DependentUpon>frmRentalAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetRate.Designer.cs">
+      <DependentUpon>frmSetRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateDVD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateDVD.Designer.cs">
+      <DependentUpon>frmUpdateDVD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateMembers.Designer.cs">
+      <DependentUpon>frmUpdateMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Members.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rate.cs" />
+    <Compile Include="DVD.cs" />
+    <Compile Include="Rentals.cs" />
+    <EmbeddedResource Include="frmDeRegMembers.resx">
+      <DependentUpon>frmDeRegMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDiscontinueDVD.resx">
+      <DependentUpon>frmDiscontinueDVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMemberAnalysis.resx">
+      <DependentUpon>frmMemberAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExecuteRentals.resx">
+      <DependentUpon>frmExecuteRentals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProcessReturn.resx">
+      <DependentUpon>frmProcessReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegDVD.resx">
+      <DependentUpon>frmRegDVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegMembers.resx">
+      <DependentUpon>frmRegMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRentalAnalysis.resx">
+      <DependentUpon>frmRentalAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetRate.resx">
+      <DependentUpon>frmSetRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateDVD.resx">
+      <DependentUpon>frmUpdateDVD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateMembers.resx">
+      <DependentUpon>frmUpdateMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvdrental.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvdrental1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dvdrental2.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
